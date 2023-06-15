@@ -1,0 +1,20 @@
+[package]
+name = "ultrasonic"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+[dependencies]
+cortex-m = "0.7.3"
+cortex-m-rt = { version = "0.7.1", features = ["device"] }
+panic-halt = "0.2.0"
+stm32f4xx-hal = { version = "0.16.0", features = ["rt", "stm32f411"] }
+defmt = {version = "0.3.1", optional = true}
+defmt-rtt = {version = "0.3.2", optional = true}
+
+
+[features]
+
+default = ["defmt", "defmt-rtt"]
